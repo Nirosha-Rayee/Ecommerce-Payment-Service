@@ -20,7 +20,7 @@ public class RazorpayPaymentGateway implements PaymentGateway{
             paymentLinkRequest.put("amount",amount);
             paymentLinkRequest.put("currency","INR");
             paymentLinkRequest.put("accept_partial",false);
-            paymentLinkRequest.put("expire_by", 1707815586);
+            paymentLinkRequest.put("expire_by", 1707815586); // 1 day from now, we can use any date in future, change in epoch time
             paymentLinkRequest.put("reference_id",orderId);
             paymentLinkRequest.put("description","Payment for order #" + orderId);
             JSONObject customer = new JSONObject();
